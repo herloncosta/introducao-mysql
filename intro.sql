@@ -51,5 +51,8 @@ UPDATE pessoas SET genero = "M" WHERE id = 1;
 UPDATE pessoas SET genero = "F" WHERE id = 2;
 UPDATE pessoas SET genero = "F" WHERE id = 3;
 
+-- Cria relacionamento entre tabelas
+ALTER TABLE tabela1 ADD CONSTRAINT `foreingkey_item_tabela1` FOREIGN KEY (`foreingkey_item_tabela2`) REFERENCES `tabela2`(`id_tabela2`) ON DELETE CASCADE ON UPDATE CASCADE;
+
 -- Consulta item de tabelas relacionadas
 SELECT item FROM tabela1 JOIN tabela2 ON tabela1.foreingkey_item = tabela2.id_item;
