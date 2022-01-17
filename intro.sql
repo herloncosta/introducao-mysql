@@ -50,3 +50,6 @@ SELECT COUNT(genero), genero FROM pessoas GROUP BY genero -- 1: M  2: F
 UPDATE pessoas SET genero = "M" WHERE id = 1;
 UPDATE pessoas SET genero = "F" WHERE id = 2;
 UPDATE pessoas SET genero = "F" WHERE id = 3;
+
+-- Consulta item de tabelas relacionadas
+SELECT item FROM tabela1 JOIN tabela2 ON tabela1.foreingkey_item = tabela2.id_item;
